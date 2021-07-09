@@ -18,7 +18,7 @@
   */
 
 /* Includes ------------------------------------------------------------------*/
-#include "gpio.h"
+#include "peripherals/gpio.h"
 
 /* USER CODE BEGIN 0 */
 

@@ -5,8 +5,11 @@
  *      Author: ruben
  */
 
-#include "swInit.h"
+#include "sysInit/swInit.h"
+#include "cmsis_os.h"
 #include "FreeRTOS.h"
+
+void MX_FREERTOS_Init(void);
 
 void softwareInit()
 {

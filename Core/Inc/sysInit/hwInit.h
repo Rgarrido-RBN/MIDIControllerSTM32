@@ -15,6 +15,7 @@ extern "C"
 }
 
 void hardwareInit();
+void Error_Handler(void);
 
 
 

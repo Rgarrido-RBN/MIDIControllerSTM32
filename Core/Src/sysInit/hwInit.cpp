@@ -4,6 +4,11 @@
  *  Created on: 9 jul. 2021
  *      Author: ruben
  */
+#include "sysInit/hwInit.h"
+#include "cmsis_os.h"
+
+void SystemClock_Config(void);
+void MX_FREERTOS_Init(void);
 
 void hardwareInit()
 {
