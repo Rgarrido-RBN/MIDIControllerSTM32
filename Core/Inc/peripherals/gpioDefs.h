@@ -12,6 +12,8 @@
 
 #define FIRST_SWITCH 1
 
+void gpioInitPAL(uint16_t pin, uint16_t mode, uint16_t pullMode);
+
 typedef enum
 {
 	PAL_GPIO_MODE_INPUT = 0,
