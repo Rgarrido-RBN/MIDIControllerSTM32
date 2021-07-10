@@ -48,7 +48,7 @@ uint32_t gpioSpeedLookUpTable[] =
 		GPIO_SPEED_FREQ_HIGH
 };
 
-void gpioInitPAL(uint16_t pin, uint16_t mode, uint16_t pullMode)
+GPIO_InitTypeDef gpioInitPAL(uint16_t pin, uint16_t mode, uint16_t pullMode)
 {
 	  GPIO_InitTypeDef GPIO_InitStruct = {0};
 
