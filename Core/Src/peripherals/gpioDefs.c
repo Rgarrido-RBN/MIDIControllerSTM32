@@ -7,11 +7,6 @@
 
 #include "peripherals/gpioDefs.h"
 
-typedef struct{
-	uint32_t      pin;
-	GPIO_TypeDef* port;
-}gpioPortPin;
-
 gpioPortPin pinsLookupTable[]=
 {
 		{GPIOA, GPIO_PIN_0} //Sample but not correct pin
@@ -48,7 +43,7 @@ uint32_t gpioSpeedLookUpTable[] =
 		GPIO_SPEED_FREQ_HIGH
 };
 
-GPIO_InitTypeDef gpioInitPAL(uint16_t pin, uint16_t mode, uint16_t pullMode)
+GPIO_InitTypeDef* gpioInitPAL(uint16_t pin, uint16_t mode, uint16_t pullMode)
 {
 	  GPIO_InitTypeDef GPIO_InitStruct = {0};
 
@@ -59,4 +54,6 @@ GPIO_InitTypeDef gpioInitPAL(uint16_t pin, uint16_t mode, uint16_t pullMode)
 	  GPIO_InitStruct.Mode = gpioModeLookUpTable[mode];
 	  GPIO_InitStruct.Pull = gpioPullModeLookUpTable[pullMode];
 	  HAL_GPIO_Init(pinsLookupTable[pin].port, &GPIO_InitStruct);
+
+	  return &GPIO_InitStruct;
 }

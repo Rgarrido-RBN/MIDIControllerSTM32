@@ -14,7 +14,7 @@ public:
 	gpioAbs(){}
 	virtual ~gpioAbs();
 	virtual int getPinState();
-	virtual int writePinState(int pinValue);
+	virtual void writePinState(int pinValue);
 };
 
 #endif /* SRC_PERIPHERALS_GPIOABS_H_ */

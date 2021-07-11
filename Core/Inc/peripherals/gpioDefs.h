@@ -12,7 +12,14 @@
 
 #define FIRST_SWITCH 1
 
-GPIO_InitTypeDef gpioInitPAL(uint16_t pin, uint16_t mode, uint16_t pullMode);
+typedef struct{
+	uint32_t      pin;
+	GPIO_TypeDef* port;
+}gpioPortPin;
+
+GPIO_InitTypeDef* gpioInitPAL(uint16_t pin, uint16_t mode, uint16_t pullMode);
+
+extern gpioPortPin pinsLookupTable[];
 
 typedef enum
 {
